@@ -3,10 +3,13 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
+
+const deviceWindow = Dimensions.get('window');
 
 export default class LoginScreen extends Component {
     static navigatorStyle = {
@@ -33,6 +36,7 @@ export default class LoginScreen extends Component {
             To get started, edit App.js
             </Text>
             <Text style={styles.instructions}>
+            {deviceWindow.height}
             </Text>
         </View>
         );
