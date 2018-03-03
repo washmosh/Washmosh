@@ -7,6 +7,7 @@ import {
   Dimensions
 } from 'react-native';
 import PropTypes from 'prop-types';
+//import { globals } from 'stores';
 import styles from './styles';
 
 const deviceWindow = Dimensions.get('window');

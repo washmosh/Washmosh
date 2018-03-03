@@ -1,9 +1,9 @@
-import { observable } from 'mobx';
-import { AsyncStorage } from 'react-native';
-import translations from './TranslationsStore';
+//import { observable } from 'mobx';
+//import { AsyncStorage } from 'react-native';
+//import translations from './TranslationsStore';
 
 class GlobalsStore {
-  @observable token = '';
+  /* @observable token = '';
   @observable isLoggedIn = false;
   @observable language = 'en';
   @observable timeStamp = '';
@@ -15,8 +15,8 @@ class GlobalsStore {
   @observable userLocation = {
     latitude: 0.0,
     longitude: 0.0,
-  };
-  setToken(token) {
+  }; */
+  /* setToken(token) {
     AsyncStorage.setItem('token', token);
     this.token = token;
     this.serviceDefaultParams.token = token;
@@ -40,7 +40,7 @@ class GlobalsStore {
   }
   changeLoginStatus(isLoggedIn) {
     this.isLoggedIn = isLoggedIn;
-  }
+  } */
 
   /* setLanguage(language) {
     this.language = language;
@@ -49,7 +49,7 @@ class GlobalsStore {
     this.serviceDefaultParams.lang = language;
   } */
 
-  getLanguage(){
+ /*  getLanguage(){
     return this.language;
   }
 
@@ -58,13 +58,13 @@ class GlobalsStore {
   }
   setUserLocation(value) {
     this.userLocation = value;
-  }
+  } */
 }
 
 const globalsStore = new GlobalsStore();
 
 /* Check Storage */
-AsyncStorage.getItem('token').then((token) => {
+/* AsyncStorage.getItem('token').then((token) => {
   if (token != null) {
     globalsStore.setToken(token);
   }
@@ -78,6 +78,6 @@ AsyncStorage.getItem('lang').then((language) => {
   if (language != null) {
     globalsStore.setLanguage(language);
   }
-});
+}); */
 
 export default globalsStore;
