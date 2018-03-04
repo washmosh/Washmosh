@@ -3,11 +3,16 @@ import {
   Platform,
   StyleSheet,
   Text,
+  TextInput,
+  TouchableOpacity,
   View,
-  Dimensions
+  Dimensions,
+  KeyboardAvoidingView,
+  Image
 } from 'react-native';
 import PropTypes from 'prop-types';
 //import { globals } from 'stores';
+//import { images } from 'resources';
 import styles from './styles';
 
 const deviceWindow = Dimensions.get('window');
@@ -29,16 +34,42 @@ export default class LoginScreen extends Component {
 
     render() {
         return (
-        <View style={styles.container}>
-            <Text style={styles.welcome}>
-            Login Page!
+            <View style={styles.container}>
+            <KeyboardAvoidingView behavior="padding" style= {{marginTop: deviceWindow.height / 5, flex: 1, 
+            justifyContent: 'center', alignItems: 'center'}}>
+            <View style={styles.loginContainer}>
+            <Image resizeMode="contain" style={styles.logo} source={require('../../resources/images/logo.png')} />
+            </View>
+        
+        
+            <TextInput style = {styles.input} 
+               autoCapitalize="none" 
+               onSubmitEditing={() => this.passwordInput.focus()} 
+               autoCorrect={false} 
+               keyboardType='email-address' 
+               returnKeyType="next" 
+               placeholder='Telefon veya E-mail' //textler dil dosyasından gelmeli
+               placeholderTextColor='rgba(0,0,0,0.7)'/>
+
+            <TextInput style = {styles.input}   
+                        returnKeyType="go" 
+                        ref={(input)=> this.passwordInput = input} 
+                        placeholder='Şifre' 
+                        placeholderTextColor='rgba(0,0,0,0.7)' 
+                        secureTextEntry/>
+
+            <TouchableOpacity style={styles.buttonContainer}
+            >
+                                {/* onPress={onButtonPress}> */}
+                        <Text  style={styles.buttonText}>LOGIN</Text>
+            </TouchableOpacity>
+            <Text 
+                style = {styles.underlineText}
+            >
+                Şifremi Unuttum/Yeni Kayıt
             </Text>
-            <Text style={styles.instructions}>
-            To get started, edit App.js
-            </Text>
-            <Text style={styles.instructions}>
-            {deviceWindow.height}
-            </Text>
+        
+        </KeyboardAvoidingView>
         </View>
         );
     }
