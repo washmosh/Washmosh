@@ -13,7 +13,7 @@ registerScreens();
 export default function startApp() {
   Navigation.startSingleScreenApp({
     screen: {
-      screen: 'SignupScreen',
+      screen: 'LoginChangePasswordScreen',
       title: 'Navigation',
       navigatorStyle: {},
     },
