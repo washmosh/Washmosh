@@ -5,6 +5,7 @@ import LoginScreen from './Login';
 import SignupScreen from './SignUp';
 import ForgotPasswordScreen from './Passwd/ForgotPasswordScreen';
 import LoginChangePasswordScreen from './Passwd/ChangePassword';
+import AddressScreen from './Address';
 
 // register all screens of the app (including internal ones)
 export default function registerScreens() {
@@ -14,4 +15,5 @@ export default function registerScreens() {
   Navigation.registerComponent('SignupScreen', () => SignupScreen);
   Navigation.registerComponent('ForgotPasswordScreen', () => ForgotPasswordScreen);
   Navigation.registerComponent('LoginChangePasswordScreen', () => LoginChangePasswordScreen);
+  Navigation.registerComponent('AddressScreen', () => AddressScreen);
 }

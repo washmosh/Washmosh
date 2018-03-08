@@ -53,7 +53,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     marginBottom: 10,
     padding: 10,
-    //color: '#fff'
+    color: 'black'//warning
+  },
+  passwrdinput:{
+    fontSize: 25,
+    borderRadius: 30,
+    width: window.width - 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 60,
+    backgroundColor: '#FFFFFF',
+    marginBottom: 20,
+    padding: 20,
+    color: 'black'//warning
+  },
+  passwrdButtonContainer:{
+    borderRadius: 30,
+    width: window.width - 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: '#2980b6',
+    paddingVertical: 15
   },
   buttonContainer:{
     width: window.width - 10,
